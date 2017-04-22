@@ -1,4 +1,5 @@
 import React from 'react';
+import { Tabs, Tab } from 'react-bootstrap';
 
 import ImageViewer from '../image-viewer';
 import './product-details-view.component.scss';
@@ -29,7 +30,22 @@ class ProductDetailsView extends React.Component {
                             <div className="product-image">
                                 <ImageViewer images={this.props.product.pictures} />
                             </div>
-                            <p>{this.props.product.description}</p>
+                            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+                                <Tab eventKey={1} title="Description">
+                                    <p>{this.props.product.description}</p>
+                                </Tab>
+                                <Tab eventKey={2} title="Reviews">
+                                    {
+                                        this.props.product.reviews.length ?
+                                        this.props.product.reviews.map((item) => {
+                                            return (
+                                                <div className="review"></div>
+                                            );
+                                        }) :
+                                        <p>There are no reviews for this product.</p>
+                                    }
+                                </Tab>
+                            </Tabs>
                         </section>
 
                     </div>
