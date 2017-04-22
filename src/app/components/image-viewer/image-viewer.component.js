@@ -31,8 +31,8 @@ class ImageViewer extends React.Component {
         return (
             <div className="image-viewer">
                 <div className="row">
-                    <div className="col-sm-2">
-                        <div className="thumbnails">
+                    <div className="col-md-2">
+                        <div className="thumbnails hidden-xs hidden-sm">
                             {
                                 this.props.images.map((img, i) => {
                                     return (
@@ -47,10 +47,14 @@ class ImageViewer extends React.Component {
                             }
                         </div>
                     </div>
-                    <div className="col-sm-10">
+                    <div className="col-md-10">
                         <img 
                             src={this.props.images[this.state.current] || '../img/no-img.jpg'} 
-                            className="current-image img-responsive" 
+                            className="img-responsive current-image hidden-xs hidden-sm" 
+                        />
+                        <img 
+                            src={this.props.images[0] || 'assets/img/no-img.jpg'} 
+                            className="img-responsive current-image hidden-md hidden-lg" 
                         />
                     </div>
                 </div>
