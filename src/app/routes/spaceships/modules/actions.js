@@ -39,7 +39,7 @@ export function getSpaceshipDetails(id) {
             payload: null
         });
 
-        const spaceships = getState().spaceships;
+        const spaceships = getState().spaceships.spaceships;
 
         if (!spaceships || !spaceships.length) {
 
@@ -53,7 +53,7 @@ export function getSpaceshipDetails(id) {
 
                     dispatch({
                         type: Constants.GET_SPACESHIP_DETAILS,
-                        payload: _.find(data, { id: +id })
+                        payload: data.find((item) => item.id == id)
                     });
             
                 }, (error) => {
@@ -69,7 +69,7 @@ export function getSpaceshipDetails(id) {
 
             dispatch({
                 type: Constants.GET_SPACESHIP_DETAILS,
-                payload: _.find(spaceships, { id: id })
+                payload: spaceships.find((item) => item.id == id)
             });
 
         }
