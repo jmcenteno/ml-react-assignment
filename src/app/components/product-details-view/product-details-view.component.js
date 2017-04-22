@@ -27,9 +27,19 @@ class ProductDetailsView extends React.Component {
                     <div className="col-sm-7">
                         
                         <section>
+                            
                             <div className="product-image">
                                 <ImageViewer images={this.props.product.pictures} />
                             </div>
+
+                            <div className="visible-xs">
+                                <small>Price</small>
+                                <br/>
+                                <strong className="product-price">{this.props.product.price}</strong>
+                                <br/>
+                                <br/>
+                            </div>
+
                             <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                                 <Tab eventKey={1} title="Description">
                                     <p>{this.props.product.description}</p>
@@ -46,15 +56,18 @@ class ProductDetailsView extends React.Component {
                                     }
                                 </Tab>
                             </Tabs>
+
                         </section>
 
                     </div>
                     <div className="col-sm-5">
                         
-                        <small>Price</small>
-                        <br/>
-                        <strong className="product-price">{this.props.product.price}</strong>
-                        <br/>
+                        <div className="hidden-xs">
+                            <small>Price</small>
+                            <br/>
+                            <strong className="product-price">{this.props.product.price}</strong>
+                            <br/>
+                        </div>
 
                         <aside>
                             <h3>Tech Specs</h3>    

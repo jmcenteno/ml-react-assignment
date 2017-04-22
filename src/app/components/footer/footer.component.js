@@ -14,7 +14,10 @@ class Footer extends React.Component {
 				<div className="container">
 					<p className="text-center">
 						&copy;
-						{' ' + (new Date()).getFullYear() + ' ' + APP_NAME + ' - All rights reserved.'}
+						{' ' + (new Date()).getFullYear() + ' ' + APP_NAME}
+						<span className="hidden-xs"> - </span>
+						<br className="visible-xs" />
+						All rights reserved.
 					</p>
 				</div>
 			</footer>
