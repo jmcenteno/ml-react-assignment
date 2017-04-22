@@ -1,0 +1,40 @@
+@import '../../../scss/themes/yeti/variables';
+
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+.navbar-brand.custom-navbar-brand {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 20px;
+    //color: #fff !important;
+    text-shadow: none;
+    transition: text-shadow 150ms ease-in-out;
+
+    &:hover {
+        text-shadow:    0 0 5px #fff, 
+                        0 0 10px #fff, 
+                        0 0 15px #fff, 
+                        0 0 20px $brand-success, 
+                        0 0 35px $brand-success, 
+                        0 0 40px $brand-success, 
+                        0 0 50px $brand-success, 
+                        0 0 75px $brand-success;
+    }
+
+    .tagline {
+        font-family: $font-family-sans-serif;
+        font-size: 12px;
+        font-weight: 100;
+        display: block;
+    }
+
+}
+
+.navbar-default .navbar-nav li .active {
+    background-color: rgba($navbar-default-link-active-bg, 0.1);
+}
+
+.navbar-inverse .navbar-nav li .active {
+    background-color: rgba($navbar-inverse-link-active-bg, 0.1);
+}
