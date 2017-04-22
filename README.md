@@ -1,13 +1,13 @@
-# SW Dashboard - ReactJS and Redux
+# Magic Leap Front End Assignment - ReactJS and Redux
 
-JavaScript application built with Dave Zuko's React Redux Starter Kit. Documentation can be found [here](https://github.com/davezuko/react-redux-starter-kit).
+Single Page Application built in ReactJS and Redux using Dave Zuko's React Redux Starter Kit. Documentation for the starter kit can be found [here](https://github.com/davezuko/react-redux-starter-kit).
 
 ### Getting started
 
 First, clone the project:
 
 ```bash
-$ git clone https://bitbucket.org/jmcenteno/sw-dashboard-reactjs.git <my-project-name>
+$ git clone https://bitbucket.org/jmcenteno/magic-leap-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
@@ -25,5 +25,3 @@ $ npm start
 
 Go to `http://localhost:8080` on your browser to view the project.
 
-Username: demo@josecenteno.com
-Password: #demo123!
