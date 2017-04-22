@@ -1,0 +1,23 @@
+@import '../../../scss/themes/yeti/variables';
+
+.image-viewer {
+
+    .current-image {
+        width: 100%;
+    }
+
+    .thumbnails a {
+        cursor: pointer;
+        
+        img {
+            margin-bottom: 8px;
+
+            &.active {
+                border-width: 3px;
+                border-color: $brand-primary;
+            }
+        }
+
+    }
+
+}

@@ -40,7 +40,7 @@ class ProductGrid extends React.Component {
             <div className="col-sm-4" key={i}>
                 <div className="panel panel-default product-grid-panel">
                     <figure>
-                        <img src={product.picture || 'http://facetheforce.today/random/400?r=' + product.id} />
+                        <img src={product.pictures[0] || '../img/no-img.jpg'} className="img-responsive" />
                     </figure>
                     <div className="panel-body">
                         <h3 className="panel-title">{product.name}</h3>

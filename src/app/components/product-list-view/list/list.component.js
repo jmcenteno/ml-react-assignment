@@ -27,7 +27,7 @@ class ProductList extends React.Component {
                                 <div className="media product-media">
                                     <div className="media-left">
                                         <figure>
-                                            <img src={product.picture || 'http://facetheforce.today/random/100?r=' + product.id} />
+                                            <img src={product.pictures[0] || '../img/no-img.jpg'} />
                                         </figure>
                                     </div>
                                     <div className="media-body">
