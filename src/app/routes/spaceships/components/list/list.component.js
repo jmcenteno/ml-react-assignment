@@ -18,28 +18,37 @@ export class SpaceshipsView extends React.Component {
 
 	}
 
+	getComponent() {
+
+		if (!this.props.spaceships) {
+			
+			return (
+				<Spinner />
+			);
+
+		} else {
+
+			return (
+				this.props.spaceships.length ?
+				<ProductListView products={this.props.spaceships} /> :
+				<div>No products found</div>
+			);
+
+		}
+
+	}
+
 	render () {
+
+		
 	
 		return (
 			<div>
 				<div className="container">
-					
 					<div className="page-header">
 						<h1>Spaceships</h1>
 					</div>
-
-					{
-						this.props.spaceships && this.props.spaceships.length ?
-						<ProductListView products={this.props.spaceships} /> :
-						<div>No products found</div>
-					}
-
-					{
-						!this.props.spaceships ?
-						<Spinner /> :
-						null
-					}
-				
+					{this.getComponent()}
 				</div>
 			</div>
 		);

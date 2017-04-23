@@ -34,6 +34,7 @@ class ImageViewer extends React.Component {
                     <div className="col-md-2">
                         <div className="thumbnails hidden-xs hidden-sm">
                             {
+                                this.props.images.length ? 
                                 this.props.images.map((img, i) => {
                                     return (
                                         <a onClick={() => this.setCurrent(i)} key={i}>
@@ -43,7 +44,8 @@ class ImageViewer extends React.Component {
                                             />
                                         </a>
                                     );
-                                })
+                                }) :
+                                <img src='../img/no-img.jpg' className="img-responsive img-thumbnail active" />
                             }
                         </div>
                     </div>

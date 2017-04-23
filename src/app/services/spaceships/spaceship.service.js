@@ -69,53 +69,37 @@ class SpaceshipsService extends BaseService {
 			
 			this.request.get(this.url)
 				.then((response) => {
-					resolve(response.body.products.map((item, i) => {
+
+					const products = response.body.products.map((item, i) => {
 
 						const images = _.shuffle(this.placeholderImages)
 							.slice(0, 4)
 							.map((img) => img += '/300');
 
-						const description = lipsum.getParagraph();
-						const reviews = [];
-						
-						return new Spaceship(
+						const spaceship = new Spaceship(
 							i, 
 							item.name, 
 							item.price || null, 
 							item.manufacturer, 
-							item.class, 
 							images, 
-							description,
+							lipsum.getParagraph(),
 							item.techspecs,
-							reviews
+							[]
 						);
 
-					}));
-				})
-				.catch((error) => {
-					reject(error);
-				});
+						spaceship.specs.class = item.class;
+						
+						return spaceship;
 
-		});
-
-	}
-
-	getSpaceshipDetails (id) {
-
-		return new Promise((resolve, reject) => {
-			
-			this.request.get(`${this.url}/${id}/`)
-				.then((response) => {
-
-					const movie = Utils.addRecordId(response.body);
+					});
 					
-					resolve(movie);
+					resolve(products);
 
 				})
 				.catch((error) => {
 					reject(error);
 				});
-				
+
 		});
 
 	}

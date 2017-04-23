@@ -22,15 +22,16 @@ export class SpaceshipDetailsView extends React.Component {
 		if (spaceship) {
 
 			return [
-				{ label: 'Length', value: spaceship.techspecs.length },
-				{ label: 'Max Acceleration', value: spaceship.techspecs.maxaccel },
-				{ label: 'Megalights', value: spaceship.techspecs.MGLT },
-				{ label: 'Max Atmospheric Speed', value: spaceship.techspecs.maxatmosphericspeed },
-				{ label: 'Hull', value: spaceship.techspecs.hull },
-				{ label: 'Sensor', value: spaceship.techspecs.sensor },
-				{ label: 'Targeting', value: spaceship.techspecs.targeting },
-				{ label: 'Armament', value: spaceship.techspecs.armament },
-				{ label: 'Communications', value: spaceship.techspecs.communications },
+				{ label: 'Class', value: spaceship.specs.class },
+				{ label: 'Length', value: spaceship.specs.length },
+				{ label: 'Max Acceleration', value: spaceship.specs.maxaccel },
+				{ label: 'Megalights', value: spaceship.specs.MGLT },
+				{ label: 'Max Atmospheric Speed', value: spaceship.specs.maxatmosphericspeed },
+				{ label: 'Hull', value: spaceship.specs.hull },
+				{ label: 'Sensor', value: spaceship.specs.sensor },
+				{ label: 'Targeting', value: spaceship.specs.targeting },
+				{ label: 'Armament', value: spaceship.specs.armament },
+				{ label: 'Communications', value: spaceship.specs.communications },
 			];
 
 		} else {
@@ -43,7 +44,7 @@ export class SpaceshipDetailsView extends React.Component {
 
 	render() {
 		
-		const techspecs = this.getSpecs(this.props.spaceshipDetails)
+		const specs = this.getSpecs(this.props.spaceshipDetails)
 	
 		return (
 			this.props.spaceshipDetails ?
@@ -52,7 +53,7 @@ export class SpaceshipDetailsView extends React.Component {
 					<ProductDetailsView 
 						product={this.props.spaceshipDetails} 
 						category={this.props.spaceshipDetails.class} 
-						specs={techspecs} 
+						specs={specs} 
 					/>
 				</div>
 			</div> :

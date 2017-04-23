@@ -13,6 +13,8 @@ export function getSpaceships() {
         
         SpaceshipsService.getSpaceships()
             .then((data) => {
+
+                console.log(data)
                 
                 dispatch({
                     type: Constants.GET_SPACESHIPS,
@@ -20,6 +22,8 @@ export function getSpaceships() {
                 });
            
             }, (error) => {
+
+                console.log(error);
 
                 dispatch({
                     type: Constants.GET_SPACESHIPS,
