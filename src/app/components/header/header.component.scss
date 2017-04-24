@@ -4,12 +4,14 @@
 
 .navbar-brand.custom-navbar-brand {
     font-family: 'Fredoka One', cursive;
-    font-size: 24px;
-    line-height: 24px;
     padding: 20px;
-    //color: #fff !important;
     text-shadow: none;
     transition: text-shadow 150ms ease-in-out;
+
+    @media (min-width: $screen-sm) {
+        font-size: 24px;
+        line-height: 24px;
+    }
 
     &:hover {
         text-shadow:    0 0 5px #fff, 
