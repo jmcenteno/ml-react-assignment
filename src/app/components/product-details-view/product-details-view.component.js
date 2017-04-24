@@ -24,7 +24,7 @@ class ProductDetailsView extends React.Component {
                     </h1>
                 </div>
                 <div className="row">
-                    <div className="col-sm-7">
+                    <div className="col-sm-8">
                         
                         <section>
                             
@@ -60,7 +60,7 @@ class ProductDetailsView extends React.Component {
                         </section>
 
                     </div>
-                    <div className="col-sm-5">
+                    <div className="col-sm-4">
                         
                         <div className="hidden-xs">
                             <small>Price</small>
@@ -85,6 +85,8 @@ class ProductDetailsView extends React.Component {
                                      );
                                  })
                             }
+                            <br/>
+                            <button type="button" className="btn btn-primary btn-block">Buy</button>
                         </aside>
                     </div>
                 </div>
