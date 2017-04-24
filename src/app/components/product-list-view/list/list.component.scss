@@ -1,14 +1,14 @@
 .product-media {
 
     figure {
+        width: 70px;
         height: 70px;
         overflow: hidden;
+        background: url('/img/spinner.svg') no-repeat 50% 50% #eee;
+        background-size: 50px auto;
         
         img {
-            width: 70px;
-            height: 70px;
-            background: url('/assets/img/spinner.svg') no-repeat 50% 50% #eee;
-            background-size: 50px auto;
+            width: 100%;
             transform: scale(1);
             filter: grayscale(100%);
             transition: 400ms ease-in-out;

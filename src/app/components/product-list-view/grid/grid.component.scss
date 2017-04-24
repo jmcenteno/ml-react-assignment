@@ -3,12 +3,12 @@
 
     figure {
         overflow: hidden;
-        max-height: 375px;
+        min-height: 200px;
+        background: url('/img/spinner.svg') no-repeat 50% 50% #eee;
+        background-size: 100px auto;
         
         img {
             width: 100%;
-            background: url('/assets/img/spinner.svg') no-repeat 50% 50% #eee;
-            background-size: 100px auto;
             transform: scale(1);
             filter: grayscale(100%);
             transition: 400ms ease-in-out;
